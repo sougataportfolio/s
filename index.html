@@ -22,723 +22,779 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+      /*======================================
+      //--//-->   ABOUT
+      ======================================*/
 
+      .about-mf .box-shadow-full {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
 
-<style>
+      .about-mf .about-img {
+        margin-bottom: 2rem;
+      }
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+      .about-mf .about-img img {
+        margin-left: 10px;
+      }
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+      .skill-mf .progress {
+        margin: .5rem 0 1.2rem 0;
+        border-radius: 0;
+        height: .7rem;
+      }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+      .skill-mf .progress .progress-bar {
+        height: .7rem;
+        background-color: #ffbd39;
+      }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+      /* Animation styles */
+      #typing-animation {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(20, end) infinite;
+      }
 
+      #typing-animation:before {
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: #ccc;
+        animation: typing-cursor 0.5s ease-in-out infinite;
+      }
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
+      @keyframes typing-cursor {
+        from {
+          width: 5px;
+        }
+        to {
+          width: 0;
+        }
+      }
 
+      /* project image zoom effect */
+      .zoom-effect {
+        overflow: hidden;
+        transition: transform 0.3s ease-out;
+      }
 
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
+      .zoom-effect:hover {
+        transform: scale(1.1);
+      }
+    </style>
   </head>
+
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Sougata Bhunia</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Sougata Bhunia</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#Publication" class="nav-link"><span>Publication</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Sougata Bhunia</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Researcher  ',
-						'Teacher  ',
-						'Traveller   ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>A Semiconductor Lover</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/sougata-bhunia85" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/Porsu8597" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me1.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Sougata Bhunia</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Semiconductor Researcher</span></p>
-										<p><span class="title-s">Experience: </span> <span>1 Years 2 Months</span></p>
-										<p><span class="title-s">Address: </span> <span>Kolkata, West Bengal, India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>Semiconductor Devices, Optolectronics</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Scientific Data Analysis</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Nanoelectronics</span> <span class="pull-right">75%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Material Characterization Techniques</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Technical Writing & LaTeX</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>Postgraduate student in Electronics Science with research experience in high-entropy nanomaterials synthesis, semiconductor device characterization, and data analysis. Proficient in Python, MATLAB, and scientific instrumentation. Passionate about contributing to cutting-edge research in nanoelectronics, semiconductor fabrication, and advanced materials. Actively seeking MS+PhD positions in related domains.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Semiconductor Device &amp; Nanoelectronics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>IC design,Fabrication &amp; Characterization</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Masters' of Science- Jadavpur University</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Bengali &amp; Hindi</span></li>
-									<li class="d-flex"><span>Tools:</span> <span>Origin, X’Pert HighScore, Match!, &amp; LATEX</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Python (NumPy, Pandas, SciPy, Matplotlib), MATLAB, 8085 Assembly, &amp; Fortran</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Photography, Teaching</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="30">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/sougata-bhunia85" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-	<section class="ftco-section" id="research-interests">
-  <div class="container">
-    <div class="row justify-content-center mb-5 pb-5">
-      <div class="col-md-8 heading-section text-center ftco-animate">
-       <!-- <h1 class="big big-2">Interests</h1 -->
-        <h2 class="mb-4">Research Interests</h2>
-		<div class="underline"></div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-10 ftco-animate">
-        <ul style="font-size: 16px; line-height: 1.8;">
-          <li>
-            <strong class="text-warning">Semiconductor Technology</strong>: 
-            <span class="text-white">Device physics, doping engineering, and thin-film processing for micro/nanoelectronics.</span><br>
-            <span class="text-warning"><em>Tools:</em></span> 
-            <span class="text-info"><em>LabVIEW, Keithley SMUs, Spin Coater, Sputtering/PECVD systems</em></span>
-          </li>
-          <li>
-            <strong class="text-warning">Integrated Circuit (IC) Design</strong>: 
-            <span class="text-white">Analog/digital circuit design, simulation, and layout with semiconductor process integration.</span><br>
-            <span class="text-warning"><em>Tools:</em></span> 
-            <span class="text-info"><em>Cadence Virtuoso, LTspice, Xilinx ISE, Multisim</em></span>
-          </li>
-          <li>
-            <strong class="text-warning">Simulation and AI Modeling</strong>: 
-            <span class="text-white">Physics-based modeling of emerging devices (e.g., InOx TFTs, SOI/Bulk MOSFETs) using quantum physics, numerical methods, and machine learning.</span><br>
-            <span class="text-warning"><em>Tools:</em></span> 
-            <span class="text-info"><em>Synopsys Sentaurus TCAD, COMSOL Multiphysics, MATLAB, Python</em></span>
-          </li>
-          <li>
-            <strong class="text-warning">Cryogenic Electronics</strong>: 
-            <span class="text-white">Analysis of semiconductor behavior at cryogenic temperatures for logic and low-power applications.</span><br>
-            <span class="text-warning"><em>Tools:</em></span> 
-            <span class="text-info"><em>Cryogenic Probe Stations, TCAD Sentaurus, Origin, Python</em></span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="ftco-section" id="references">
-  <div class="container">
-    <div class="row justify-content-center mb-5 pb-5">
-      <div class="col-md-8 heading-section text-center ftco-animate">
-        <!-- <h1 class="big big-2">References</h1>-->
-        <h2 class="mb-4">References</h2>
-		<div class="underline"></div>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-11 ftco-animate text-white">
-        <div class="table-responsive">
-          <table class="table table-bordered text-white">
-            <thead class="thead-light text-warning">
-              <tr>
-                <th>Name</th>
-                <th>Designation</th>
-                <th>Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Dr. Kalyan Kumar Chattopadhyay</td>
-                <td>Professor, Department of Physics, Jadavpur University</td>
-                <td><a href="mailto:kkc.juphy@gmail.com" class="text-warning">kkc.juphy@gmail.com</a></td>
-              </tr>
-              <tr>
-                <td>Dr. Nabin Baran Manik</td>
-                <td>Professor, Department of Physics, Jadavpur University</td>
-                <td><a href="mailto:nabinb.manik@jadavpuruniversity.in" class="text-warning">nabinb.manik@jadavpuruniversity.in</a></td>
-              </tr>
-              <tr>
-                <td>Dr. Jayoti Das</td>
-                <td>Professor, Department of Physics, Jadavpur University</td>
-                <td><a href="mailto:jayoti.das@gmail.com" class="text-warning">jayoti.das@gmail.com</a></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+            <li class="nav-item"><a href="#Publication" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </nav>
 
+    <!-- HERO SECTION -->
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+              <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+                <div class="overlay"></div>
+              </div>
+              <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Hello!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Sougata Bhunia</span></h1>
 
-	
+                  <!-- Typing animation -->
+                  <span id="typing-animation"></span>
+
+                  <script>
+                    // Initialize the typing animation
+                    const typingAnimationElement = document.getElementById('typing-animation');
+
+                    // Create an array of typing text
+                    const typingTexts = [
+                      'Semiconductor Researcher  ',
+                      'TEEP Intern at NTHU  ',
+                      'Incoming PhD at NTU   ',
+                    ];
+
+                    // Create a function to display the typing animation for a given text
+                    function playTypingAnimation(text) {
+                      // Loop through each character and add it to the element
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                          typingAnimationElement.textContent += text[i];
+                        }, i * 200); // Increase the delay to slow down the typing animation
+                      }
+
+                      // Once the animation is complete, reset the text and start over
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = '';
+                        playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                      }, text.length * 200);
+                    }
+
+                    // Start the typing animation loop
+                    playTypingAnimation(typingTexts[0]);
+                  </script>
+
+                  <br><br>
+                  <h2>TEEP Research Intern, National Tsing Hua University</h2>
+                  <h3 class="mb-3">Incoming PhD Student, National Taiwan University (Feb 2026)</h3>
+                  <p>
+                    M.Sc. (Electronics Science) from Jadavpur University with research experience in
+                    high-entropy oxide materials, semiconductor process flow design, and advanced
+                    characterization (XRD, FESEM, UV–Vis, FTIR, TGA/DSC).
+                  </p>
+                  <p>
+                    <a href="https://www.linkedin.com/in/sougata-bhunia85" class="btn btn-primary py-3 px-4">LinkedIn</a>
+                    <a href="https://github.com/sougata-bhunia" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 col-lg-5 d-flex">
+              <div class="img-about img d-flex align-items-stretch">
+                <div class="overlay">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img src="images/about-me1.png" class="img-fluid rounded b-shadow-a" alt="">
+                      </div>
+                    </div>
+                    <!-- Details next to profile image -->
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p><span class="title-s">Name: </span> <span>Sougata Bhunia</span></p>
+                        <p><span class="title-s">Job Role: </span> <span>Semiconductor Researcher</span></p>
+                        <p><span class="title-s">Experience: </span> <span>2+ Years (Research &amp; Teaching)</span></p>
+                        <p><span class="title-s">Address: </span>
+                          <span>Paschim Medinipur, West Bengal, India (currently in Hsinchu, Taiwan)</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="skill-mf">
+                    <p class="title-s">Skills</p>
+                    <span>Semiconductor Devices &amp; Optoelectronics</span> <span class="pull-right">Advanced</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Scientific Data Analysis</span> <span class="pull-right">Advanced</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Nanoelectronics</span> <span class="pull-right">Intermediate</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Material Characterization Techniques</span> <span class="pull-right">Advanced</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+
+                    <span>Technical Writing &amp; LaTeX</span> <span class="pull-right">Advanced</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ABOUT TEXT -->
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+              <div class="row justify-content-start pb-3">
+                <div class="col-md-12 heading-section ftco-animate">
+                  <h1 class="big">About</h1>
+                  <h2 class="mb-4">About Me</h2>
+
+                  <p>
+                    I completed my M.Sc. in Electronics Science from Jadavpur University, where I worked on
+                    high-entropy perovskite oxide synthesis and advanced materials characterization. My current
+                    TEEP internship at the College of Semiconductor Research (NTHU) focuses on semiconductor
+                    process flow design and materials–device performance correlations. From February 2026, I will
+                    start my PhD in Mechanical Engineering (Nanoengineering &amp; Nanoscience) at National Taiwan
+                    University, working on semiconductor metrology and instrumentation.
+                  </p>
+
+                  <ul class="about-info mt-4 px-md-0 px-2">
+                    <li class="d-flex"><span>Focus:</span>
+                      <span>Semiconductor Metrology &amp; Nanomaterials</span></li>
+                    <li class="d-flex"><span>Interest:</span>
+                      <span>Process Flow, Thin-Film Characterization, Instrumentation</span></li>
+                    <li class="d-flex"><span>Education:</span>
+                      <span>M.Sc. (Electronics Science), Jadavpur University (2025)</span></li>
+                    <li class="d-flex"><span>Next:</span>
+                      <span>PhD, National Taiwan University (Feb 2026)</span></li>
+                    <li class="d-flex"><span>Language:</span>
+                      <span>English, Bengali &amp; Hindi</span></li>
+                    <li class="d-flex"><span>Tools:</span>
+                      <span>Origin, Match!, X’Pert HighScore, MATLAB, Python, LaTeX</span></li>
+                    <li class="d-flex"><span>Other Skills:</span>
+                      <span>Python (NumPy, Pandas, SciPy, Matplotlib), 8085 Assembly, Fortran</span></li>
+                    <li class="d-flex"><span>Interest:</span>
+                      <span>Traveling, Photography, Teaching</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                <div class="text">
+                  <p class="mb-4">
+                    <span class="number" data-number="5">0</span> <span>+</span>
+                    <span>&nbsp; Research &amp; Technical Projects</span>
+                  </p>
+                  <p><a href="https://www.linkedin.com/in/sougata-bhunia85" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS -->
+    <section class="ftco-section" id="research-interests">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-8 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Research Interests</h2>
+            <div class="underline"></div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10 ftco-animate">
+            <ul style="font-size: 16px; line-height: 1.8;">
+              <li>
+                <strong class="text-warning">Optical Metrology &amp; 3D Surface Profiling</strong>:
+                <span class="text-white">
+                  Development of white-light interferometry (WLI) systems for high-precision surface topography,
+                  thin-film thickness measurement, and defect characterization in semiconductor and MEMS devices.
+                </span><br>
+                <span class="text-warning"><em>Techniques/Tools:</em></span>
+                <span class="text-info">
+                  <em>Interferometric setups, broadband sources, precision stages, Python/MATLAB-based data analysis</em>
+                </span>
+              </li>
+              <li>
+                <strong class="text-warning">Computational Imaging &amp; Signal Processing</strong>:
+                <span class="text-white">
+                  Physics-based optical modeling combined with reconstruction algorithms to improve axial resolution,
+                  phase retrieval accuracy, and robustness under complex surface conditions.
+                </span><br>
+                <span class="text-warning"><em>Techniques/Tools:</em></span>
+                <span class="text-info">
+                  <em>Numerical modeling, signal processing, image reconstruction in Python/MATLAB</em>
+                </span>
+              </li>
+              <li>
+                <strong class="text-warning">Instrumentation &amp; System Integration</strong>:
+                <span class="text-white">
+                  Design and optimization of interferometric and imaging setups with high-speed detectors and
+                  automated stages for wafer-level inspection and metrology.
+                </span><br>
+                <span class="text-warning"><em>Techniques/Tools:</em></span>
+                <span class="text-info">
+                  <em>Optomechanical integration, motion control, measurement automation</em>
+                </span>
+              </li>
+              <li>
+                <strong class="text-warning">Nanomaterials &amp; Device Characterization</strong>:
+                <span class="text-white">
+                  Optical and thermal characterization of high-entropy oxides and thin films for thermoelectric and
+                  hydrogen-evolution applications, and their correlation with device performance.
+                </span><br>
+                <span class="text-warning"><em>Techniques/Tools:</em></span>
+                <span class="text-info">
+                  <em>XRD, FESEM/EDS, UV–Vis, FTIR, TGA/DSC, thin-film processing &amp; electrical test platforms</em>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="ftco-section" id="references">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-8 heading-section text-center ftco-animate">
+            <h2 class="mb-4">References</h2>
+            <div class="underline"></div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-11 ftco-animate text-white">
+            <div class="table-responsive">
+              <table class="table table-bordered text-white">
+                <thead class="thead-light text-warning">
+                  <tr>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Email</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dr. Kalyan Kumar Chattopadhyay</td>
+                    <td>Professor, Department of Physics, Jadavpur University</td>
+                    <td><a href="mailto:kkc.jupy@gmail.com" class="text-warning">kkc.jupy@gmail.com</a></td>
+                  </tr>
+                  <tr>
+                    <td>Dr. Nabin Baran Manik</td>
+                    <td>Professor, Department of Physics, Jadavpur University</td>
+                    <td><a href="mailto:nabinb.manik@jadavpuruniversity.in" class="text-warning">nabinb.manik@jadavpuruniversity.in</a></td>
+                  </tr>
+                  <tr>
+                    <td>Dr. Jayoti Das</td>
+                    <td>Professor, Department of Physics, Jadavpur University</td>
+                    <td><a href="mailto:jayoti.das@gmail.com" class="text-warning">jayoti.das@gmail.com</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME SECTION -->
     <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
           <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
+            <h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
-            <p>Aspiring Semiconductor Researcher with hands-on experience in high-entropy nanomaterials synthesis and device characterization. Skilled in semiconductor physics, IC design, and AI-based modeling using tools like TCAD, MATLAB, and Python. Committed to advancing next-gen nanoelectronics through academic research and innovation.</p>
+            <p>
+              Research experience in semiconductor materials and device processes with a focus on
+              high-entropy oxides, thin-film characterization, and process–performance correlations. Skilled in
+              advanced characterization (XRD, FESEM/EDS, UV–Vis, FTIR, TGA/DSC) and data analysis using
+              Python and MATLAB. Currently a TEEP intern at NTHU and preparing to begin a PhD at NTU in
+              Feb 2026 in semiconductor metrology and instrumentation.
+            </p>
           </div>
         </div>
 
-		<div class="row">
-	<h1 class="big-4">Experience</h1>
-	<div class="underline"></div>
-</div>
-<br>
+        <div class="row">
+          <h1 class="big-4">Experience</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
 
-<!-- Research Experience Section -->
-<div class="row">
-	<div class="col-md-12 text-center">
-		<h2 class="big-4">Research Experience</h2>
-		
-	</div>
-</div>
-<br>
+        <!-- Research Experience Section -->
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="big-4">Research Experience</h2>
+          </div>
+        </div>
+        <br>
 
-<div class="row">
-	<!-- TEEP Internship -->
-	<div class="col-md-6">
-		<div class="resume-wrap ftco-animate">
-			<span class="date">Sep 2025 – Dec 2025</span>
-			<h2>TEEP Internship</h2>
-			<span class="position">National Tsing Hua University, TAIWAN</span>
-			<p class="mt-4">
-				NTHU, a top-tier research university in Taiwan, globally renowned for cutting-edge innovation in semiconductors, nanoelectronics, and AI. 
-				<ul>
-					Conducting research on semiconductor material synthesis and device architecture development under
-the Taiwan Experience Education Program (TEEP).</li>
-					Designing complete device process flows integrating material growth, patterning, and electrical charac-
-terization stages.</li>
-					Investigating correlations between synthesis parameters and device performance to optimize fabrication
-efficiency.</li>
-Collaborating with cross-disciplinary teams to align materials engineering with semiconductor process
-innovation.</li>
-				</ul>
-			</p>
-		</div>
-		<div class="row justify-content-center mt-5">
-			<div class="col-md-6 text-center ftco-animate">
-				<p><a href="https://drive.google.com/file/d/1AZdig79Aj7f9xaQ2-1vLfBkiMNdFYQN_/view?usp=sharing" class="btn btn-primary py-4 px-5">View Project</a></p>
-			</div>
-		</div>
-	</div>
+        <div class="row">
+          <!-- TEEP Internship -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Aug 2025 – Dec 2025</span>
+              <h2>Research Intern (TEEP Program)</h2>
+              <span class="position">College of Semiconductor Research, National Tsing Hua University, Taiwan</span>
+              <p class="mt-4">
+                NTHU is a top-tier research university in Taiwan with strong programs in semiconductors and nanoelectronics.
+              </p>
+              <ul>
+                <li>Developing semiconductor material synthesis routes and device process flows integrating growth,
+                    patterning, and electrical testing.</li>
+                <li>Investigating correlations between synthesis conditions and device performance to optimize
+                    metrics and fabrication efficiency.</li>
+                <li>Collaborating with cross-disciplinary teams to align materials engineering with process innovation
+                    for semiconductor devices.</li>
+              </ul>
+            </div>
+            <div class="row justify-content-center mt-5">
+              <div class="col-md-6 text-center ftco-animate">
+                <p><a href="https://drive.google.com/file/d/1AZdig79Aj7f9xaQ2-1vLfBkiMNdFYQN_/view?usp=sharing" class="btn btn-primary py-4 px-5">View Project</a></p>
+              </div>
+            </div>
+          </div>
 
-	<!-- Master's Thesis -->
-	<div class="col-md-6">
-		<div class="resume-wrap ftco-animate">
-			<span class="date">Aug 2024 – Jul 2025</span>
-			<h2>Masters' Thesis Work</h2>
-			<span class="position">Jadavpur University</span>
-			<p class="mt-4">
-				Jadavpur University, a premier public research institution in India, renowned for its excellence in science and engineering. 
-				<ul>
-					<li>Developed lead-free high-entropy perovskite oxide using sol-gel technique for thermoelectric and hydrogen evolution applications.</li>
-					<li>Performed structural (XRD), morphological (FESEM), elemental (EDS), and optical (UV-Vis, FTIR) analysis.</li>
-					<li>Conducted thermal studies using TGA and DSC; data processed via Origin, Match!, and X’Pert HighScore.</li>
-				</ul>
-			</p>
-		</div>
-		<div class="row justify-content-center mt-5">
-			<div class="col-md-6 text-center ftco-animate">
-				<p><a href="https://drive.google.com/file/d/133pzka-B4aRBkQ40ls_HV9-kS9pp3Hkg/view?usp=drivesdk" class="btn btn-primary py-4 px-5">View Thesis</a></p>
-			</div>
-		</div>
-	</div>
+          <!-- Master's Thesis -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Aug 2024 – Jul 2025</span>
+              <h2>Master's Thesis Work</h2>
+              <span class="position">Jadavpur University</span>
+              <p class="mt-4">
+                Jadavpur University is a premier public research institution in India, renowned for excellence in science and engineering.
+              </p>
+              <ul>
+                <li>Developed lead-free high-entropy perovskite oxide using sol-gel technique for thermoelectric and
+                    hydrogen-evolution applications.</li>
+                <li>Performed structural (XRD), morphological (FESEM), elemental (EDS), and optical (UV–Vis, FTIR) analysis.</li>
+                <li>Conducted thermal studies using TGA and DSC; processed data using Origin, Match!, and X’Pert HighScore.</li>
+              </ul>
+            </div>
+            <div class="row justify-content-center mt-5">
+              <div class="col-md-6 text-center ftco-animate">
+                <p><a href="https://drive.google.com/file/d/133pzka-B4aRBkQ40ls_HV9-kS9pp3Hkg/view?usp=drivesdk" class="btn btn-primary py-4 px-5">View Thesis</a></p>
+              </div>
+            </div>
+          </div>
 
-	<!-- INUP Training -->
-	<div class="col-md-6">
-		<div class="resume-wrap ftco-animate">
-			<span class="date">Feb 2025</span>
-			<h2>Hands-on Nanoelectronics Training</h2>
-			<span class="position">INUP Program (IIT Kharagpur)</span>
-			<p class="mt-4">
-				INUP is a MeitY-sponsored initiative for hands-on nanotechnology training at premier institutes.
-				<ul>
-					<li>Trained in semiconductor device fabrication, including photolithography and deposition in Class 100 cleanroom.</li>
-					<li>Simulated MOS devices and MEMS structures using Sentaurus TCAD tools.</li>
-					<li>Used nanoscale tools such as profilometers and probe stations for practical measurements.</li>
-				</ul>
-			</p>
-		</div>
-		<div class="row justify-content-center mt-5">
-			<div class="col-md-6 text-center ftco-animate">
-				<p><a href="https://drive.google.com/file/d/1AZdig79Aj7f9xaQ2-1vLfBkiMNdFYQN_/view?usp=sharing" class="btn btn-primary py-4 px-5">View Certificate</a></p>
-			</div>
-		</div>
-	</div>
-</div>
+          <!-- INUP Training -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Feb 2025</span>
+              <h2>Hands-on Nanoelectronics Training</h2>
+              <span class="position">INUP Program (IIT Kharagpur)</span>
+              <p class="mt-4">
+                INUP is a MeitY-sponsored initiative for hands-on nanotechnology training at premier institutes.
+              </p>
+              <ul>
+                <li>Received structured training in semiconductor device fabrication workflows in a cleanroom environment.</li>
+                <li>Gained exposure to lithography, thin-film deposition, and device characterization steps.</li>
+                <li>Worked with nanoscale measurement tools such as profilometers and probe stations in guided sessions.</li>
+              </ul>
+            </div>
+            <div class="row justify-content-center mt-5">
+              <div class="col-md-6 text-center ftco-animate">
+                <p><a href="https://drive.google.com/file/d/1AZdig79Aj7f9xaQ2-1vLfBkiMNdFYQN_/view?usp=sharing" class="btn btn-primary py-4 px-5">View Certificate</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<br>
+        <br>
 
-<!-- Teaching Experience Section -->
-<div class="row mt-5">
-	<div class="col-md-12 text-center">
-		<h2 class="big-4">Teaching Experience</h2>
-		
-	</div>
-</div>
-<br>
+        <!-- Teaching Experience Section -->
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
+            <h2 class="big-4">Teaching Experience</h2>
+          </div>
+        </div>
+        <br>
 
-<div class="row">
-	<!-- PW Teaching -->
-	<div class="col-md-6">
-		<div class="resume-wrap ftco-animate">
-			<span class="date">Oct 2023 – Mar 2024</span>
-			<h2>Physics Mentor</h2>
-			<span class="position">Physics Wallah</span>
-			<p class="mt-4">
-				Physics Wallah is a leading Indian ed-tech platform offering quality education for competitive exams.
-				<ul>
-					<li>Mentored and solved doubts for +2 level students in Physics, covering core concepts and numericals.</li>
-					<li>Conducted live sessions and provided personalized guidance to boost student performance.</li>
-					<li>Provided content support and analytical review of test papers.</li>
-				</ul>
-			</p>
-		</div>
-		<div class="row justify-content-center mt-5">
-			<div class="col-md-6 text-center ftco-animate">
-				<p><a href="https://drive.google.com/your-certificate-link" class="btn btn-primary py-4 px-5">View Certificate</a></p>
-			</div>
-		</div>
-	</div>
-</div>
+        <div class="row">
+          <!-- PW Teaching -->
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Oct 2023 – Mar 2024</span>
+              <h2>Physics Mentor</h2>
+              <span class="position">Physics Wallah</span>
+              <p class="mt-4">
+                Physics Wallah is a leading Indian ed-tech platform offering education for school and competitive exams.
+              </p>
+              <ul>
+                <li>Mentored and supported +2 level students in Physics, focusing on core concepts and problem solving.</li>
+                <li>Resolved doubts through the platform and provided structured explanations for numerical questions.</li>
+                <li>Reviewed student responses and provided feedback on assigned practice problems.</li>
+              </ul>
+            </div>
+            <div class="row justify-content-center mt-5">
+              <div class="col-md-6 text-center ftco-animate">
+                <p><a href="https://drive.google.com/your-certificate-link" class="btn btn-primary py-4 px-5">View Certificate</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <br><br>
 
-		<br>
-		<br>
+        <!-- EDUCATION -->
+        <div class="row">
+          <h1 class="big-4">Education</h1>
+          <div class="underline"></div>
+        </div>
+        <br>
 
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-  <div class="col-md-6">
-    <div class="resume-wrap ftco-animate">
-      <span class="date">2023–2025</span>
-      <h2>M.Sc. in Electronics Science</h2>
-      <span class="position">Jadavpur University, Kolkata</span>
-      <p class="mt-4">
-        SGPA: 7.43/10 (Up to 3rd Semester)<br>
-        Specialization: Semiconductor Devices, IC Design & High-Entropy Materials.<br>
-        <a href="https://drive.google.com/file/d/1BJS3tckP7zWaBkxk527N3ry1ikpvYiMC/view?usp=drivesdk" target="_blank">📄 View Certificate</a>
-      </p>
-    </div>
-  </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2023–2025</span>
+              <h2>M.Sc. in Electronics Science</h2>
+              <span class="position">Jadavpur University, Kolkata</span>
+              <p class="mt-4">
+                CGPA: 7.72/10 (provisional result; final degree certificate expected on 24 Dec 2025)<br>
+                Focus: High-entropy perovskite oxides, semiconductor devices, and advanced characterization.<br>
+                <a href="https://drive.google.com/file/d/1BJS3tckP7zWaBkxk527N3ry1ikpvYiMC/view?usp=drivesdk" target="_blank">📄 View Provisional Certificate</a>
+              </p>
+            </div>
+          </div>
 
-  <div class="col-md-6">
-    <div class="resume-wrap ftco-animate">
-      <span class="date">2020–2023</span>
-      <h2>B.Sc. (Hons.) in Physics</h2>
-      <span class="position">St. Paul’s Cathedral Mission College, University of Calcutta</span>
-      <p class="mt-4">
-        SGPA: 7.5/10<br>
-        Specialization: General Physics with Electronics Emphasis.<br>
-        <a href="https://drive.google.com/file/d/1E2-oGSzfIcvOXbdm4EuHRELLn3Ki0vmQ/view?usp=drivesdk" target="_blank">📄 View Transcript</a>
-      </p>
-    </div>
-  </div>
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2020–2023</span>
+              <h2>B.Sc. (Hons.) in Physics</h2>
+              <span class="position">St. Paul’s Cathedral Mission College, University of Calcutta</span>
+              <p class="mt-4">
+                SGPA: 7.5/10<br>
+                Specialization: General Physics with Electronics emphasis.<br>
+                <a href="https://drive.google.com/file/d/1E2-oGSzfIcvOXbdm4EuHRELLn3Ki0vmQ/view?usp=drivesdk" target="_blank">📄 View Transcript</a>
+              </p>
+            </div>
+          </div>
 
-  <div class="col-md-6">
-    <div class="resume-wrap ftco-animate">
-      <span class="date">2018–2020</span>
-      <h2>Higher Secondary</h2>
-      <span class="position">Vidyasagar Vidyapith Boys’ School,West Bengal Council of Higher Secondary Education</span>
-      <p class="mt-4">
-        Percentage: 90.4%<br>
-        Specialization: Science (Physics, Chemistry, Mathematics,Biology).<br>
-        <a href="https://drive.google.com/file/d/1k-VtS0gu1GYdE2u-8bl9a0p1rjc_-N5S/view?usp=drivesdk" target="_blank">📄 View Marksheet</a>
-      </p>
-    </div>
-  </div>
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2018–2020</span>
+              <h2>Higher Secondary</h2>
+              <span class="position">Vidyasagar Vidyapith Boys’ School, WBCHSE</span>
+              <p class="mt-4">
+                Percentage: 90.4%<br>
+                Specialization: Science (Physics, Chemistry, Mathematics, Biology).<br>
+                <a href="https://drive.google.com/file/d/1k-VtS0gu1GYdE2u-8bl9a0p1rjc_-N5S/view?usp=drivesdk" target="_blank">📄 View Marksheet</a>
+              </p>
+            </div>
+          </div>
 
-  <div class="col-md-6">
-    <div class="resume-wrap ftco-animate">
-      <span class="date">2014–2018</span>
-      <h2>Secondary (10th)</h2>
-      <span class="position">Noygram High School, West Bengal Board of Secondary Education</span>
-      <p class="mt-4">
-        Percentage: 91.71%<br>
-        <a href="https://drive.google.com/file/d/18uq5pKxHIEsEcMSxJoJVUiAtKns6d4Xd/view?usp=drivesdk" target="_blank">📄 View Marksheet</a>
-      </p>
-    </div>
-  </div>
-</div>
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2014–2018</span>
+              <h2>Secondary (10th)</h2>
+              <span class="position">Noygram High School, WBBSE</span>
+              <p class="mt-4">
+                Percentage: 91.71%<br>
+                <a href="https://drive.google.com/file/d/18uq5pKxHIEsEcMSxJoJVUiAtKns6d4Xd/view?usp=drivesdk" target="_blank">📄 View Marksheet</a>
+              </p>
+            </div>
+          </div>
+        </div>
 
-
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/1BJS3tckP7zWaBkxk527N3ry1ikpvYiMC/view?usp=drivesdk" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p><a href="https://drive.google.com/file/d/1BJS3tckP7zWaBkxk527N3ry1ikpvYiMC/view?usp=drivesdk" class="btn btn-primary py-4 px-5">Download CV</a></p>
+          </div>
+        </div>
+      </div>
     </section>
 
-
-	<section class="ftco-section" id="certified-course">
-  <div class="container">
-    <div class="row justify-content-center mb-5 pb-5">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Certificate</h1>
-        <h2 class="mb-4">Certified Courses</h2>
+    <!-- CERTIFIED COURSES -->
+    <section class="ftco-section" id="certified-course">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Certificate</h1>
+            <h2 class="mb-4">Certified Courses</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10 ftco-animate">
+            <table class="table table-bordered text-left">
+              <thead>
+                <tr class="text-white">
+                  <th>Course</th>
+                  <th>Institution</th>
+                  <th class="text-warning">Certificate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-white">
+                  <td>MATLAB</td>
+                  <td>Vanderbilt University</td>
+                  <td>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/4VLE0VBFGM9M" target="_blank" style="color: #FFD700;">
+                      🧾 4VLE0VBFGM9M
+                    </a>
+                  </td>
+                </tr>
+                <tr class="text-white">
+                  <td>Semiconductor Characterization</td>
+                  <td>Arizona State University</td>
+                  <td>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/7GBH5OY37483" target="_blank" style="color: #FFD700;">
+                      🧾 7GBH5OY37483
+                    </a>
+                  </td>
+                </tr>
+                <tr class="text-white">
+                  <td>Nanotechnology</td>
+                  <td>Duke, UNC, NC State University</td>
+                  <td>
+                    <a href="https://www.coursera.org/account/accomplishments/records/621ZOLDPDR36" target="_blank" style="color: #FFD700;">
+                      🧾 621ZOLDPDR36
+                    </a>
+                  </td>
+                </tr>
+                <tr class="text-white">
+                  <td>Semiconductor Fabrication</td>
+                  <td>Purdue / UT Austin / Intel</td>
+                  <td>
+                    <a href="https://www.coursera.org/account/accomplishments/records/QVNOKPZN2SQB" target="_blank" style="color: #FFD700;">
+                      🧾 QVNOKPZN2SQB
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-md-10 ftco-animate">
-        <table class="table table-bordered text-left">
-          <thead>
-            <tr class="text-white">
-              <th>Course</th>
-              <th>Institution</th>
-              <th class="text-warning">Certificate</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="text-white">
-              <td>MATLAB</td>
-              <td>Vanderbilt University</td>
-              <td>
-                <a href="https://www.coursera.org/account/accomplishments/verify/4VLE0VBFGM9M" target="_blank" style="color: #FFD700;">
-                  🧾 4VLE0VBFGM9M
-                </a>
-              </td>
-            </tr>
-            <tr class="text-white">
-              <td>Semiconductor Characterization</td>
-              <td>Arizona State University</td>
-              <td>
-                <a href="https://www.coursera.org/account/accomplishments/verify/7GBH5OY37483" target="_blank" style="color: #FFD700;">
-                  🧾 7GBH5OY37483
-                </a>
-              </td>
-            </tr>
-            <tr class="text-white">
-              <td>Nanotechnology</td>
-              <td>Duke, UNC, NC State University</td>
-              <td>
-                <a href="https://www.coursera.org/account/accomplishments/records/621ZOLDPDR36" target="_blank" style="color: #FFD700;">
-                  🧾 621ZOLDPDR36
-                </a>
-              </td>
-            </tr>
-            <tr class="text-white">
-              <td>Semiconductor Fabrication</td>
-              <td>Coursera</td>
-              <td>
-                <a href="https://www.coursera.org/account/accomplishments/records/QVNOKPZN2SQB" target="_blank" style="color: #FFD700;">
-                  🧾 QVNOKPZN2SQB
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-   
-
+    <!-- PROJECTS (previously Publication) -->
     <section class="ftco-section" id="Publication">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Publication</h1>
-            <h2 class="mb-4">Publication</h2>
-            <p>Below are the Few Publication of me !!</p>
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects &amp; Research Work</h2>
+            <p>Selected academic and experimental projects related to semiconductor materials, characterization, and process design.</p>
           </div>
         </div>
-        <div class="row d-flex">
-  <div class="col-md-4 d-flex ftco-animate">
-    <div class="blog-entry justify-content-end">
-      <a href="https://github.com/sougata-bhunia/High-Entropy-Perovskite" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-      </a>
-      <div class="text mt-3 float-right d-block">
-        <h3 class="heading"><a href="https://github.com/sougata-bhunia/High-Entropy-Perovskite">High Entropy Perovskite Study</a></h3>
-        <p>Synthesized novel high-entropy oxide perovskites and performed detailed structural, surface, and electrical property characterization.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4 d-flex ftco-animate">
-    <div class="blog-entry justify-content-end">
-      <a href="https://github.com/sougata-bhunia/MOS-Imager-Notes" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-      </a>
-      <div class="text mt-3 float-right d-block">
-        <h3 class="heading"><a href="https://github.com/sougata-bhunia/MOS-Imager-Notes">MOS Image Sensor Analysis</a></h3>
-        <p>Explored CCD and CMOS imager technologies through theoretical analysis and simulations using Chenming Hu's MOSFET model.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4 d-flex ftco-animate">
-    <div class="blog-entry justify-content-end">
-      <a href="https://github.com/sougata-bhunia/Semiconductor-Fabrication" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-      </a>
-      <div class="text mt-3 float-right d-block">
-        <h3 class="heading"><a href="https://github.com/sougata-bhunia/Semiconductor-Fabrication">Semiconductor Device Fabrication</a></h3>
-        <p>Documented key fabrication steps and cleanroom processes in IC design and nanoelectronic device prototyping.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-<div class="row d-flex justify-content-center">  
-  <div class="col-md-4 d-flex ftco-animate">
-    <div class="blog-entry justify-content-end">
-      <a href="https://github.com/sougata-bhunia/Machine-Learning-Thermal" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-      </a>
-      <div class="text mt-3 float-right d-block">
-        <h3 class="heading"><a href="https://github.com/sougata-bhunia/Machine-Learning-Thermal">ML in Thermal Property Prediction</a></h3>
-        <p>Applied regression models to estimate thermal properties of oxide materials from compositional and microstructural features.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4 d-flex ftco-animate">
-    <div class="blog-entry justify-content-end">
-      <a href="https://github.com/sougata-bhunia/Material-Simulation-VASP" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-      </a>
-      <div class="text mt-3 float-right d-block">
-        <h3 class="heading"><a href="https://github.com/sougata-bhunia/Material-Simulation-VASP">Material Simulation using VASP</a></h3>
-        <p>Simulated electronic band structures and defect formation energies in complex oxides using VASP and DFT methods.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
-	  </div>
+        <!-- Research Projects -->
+        <div class="row">
+          <div class="col-md-12 ftco-animate">
+            <h3 class="mb-4 text-center">Research Projects</h3>
+          </div>
+        </div>
+
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+              <a href="https://github.com/sougata-bhunia/High-Entropy-Perovskite" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="https://github.com/sougata-bhunia/High-Entropy-Perovskite">High-Entropy Perovskite Study</a></h3>
+                <p>
+                  Sol–gel synthesis and advanced characterization (XRD, FESEM/EDS, UV–Vis, FTIR, TGA/DSC) of
+                  lead-free high-entropy oxide materials for thermoelectric and hydrogen-evolution applications.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+              <a href="https://github.com/sougata-bhunia/Machine-Learning-Thermal" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="https://github.com/sougata-bhunia/Machine-Learning-Thermal">ML in Thermal Property Exploration</a></h3>
+                <p>
+                  Applied regression methods to explore thermal property trends of oxide materials from compositional
+                  and microstructural features using Python-based workflows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Notes & Learning Repos -->
+        <br>
+        <div class="row">
+          <div class="col-md-12 ftco-animate">
+            <h3 class="mb-4 text-center">Technical Notes &amp; Learning Repositories</h3>
+          </div>
+        </div>
+
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+              <a href="https://github.com/sougata-bhunia/MOS-Imager-Notes" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="https://github.com/sougata-bhunia/MOS-Imager-Notes">MOS Image Sensor Notes</a></h3>
+                <p>
+                  Notes and theoretical analysis of MOS-based image sensor principles and device characteristics,
+                  including CCD and CMOS imagers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+              <a href="https://github.com/sougata-bhunia/Semiconductor-Fabrication" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="https://github.com/sougata-bhunia/Semiconductor-Fabrication">Semiconductor Fabrication Notes</a></h3>
+                <p>
+                  Process documentation and workflow understanding for key steps in IC and nanoelectronic device
+                  fabrication, with emphasis on process integration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="blog-entry justify-content-end">
+              <a href="https://github.com/sougata-bhunia/Material-Simulation-VASP" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="https://github.com/sougata-bhunia/Material-Simulation-VASP">Material Simulation Using VASP</a></h3>
+                <p>
+                  Introductory DFT-based material simulation practice using VASP, focusing on basic workflow setup
+                  and interpretation of electronic structure outputs for complex oxides.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    <!-- COUNTERS + GOOGLE SCHOLAR -->
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
       <div class="container">
-		<div class="row d-md-flex align-items-center">
+        <div class="row d-md-flex align-items-center">
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Achievements</span>
+                <strong class="number" data-number="3">0</strong>
+                <span>Major Academic Achievements</span>
               </div>
             </div>
           </div>
@@ -746,49 +802,39 @@ innovation.</li>
             <div class="block-18">
               <div class="text">
                 <strong class="number" data-number="5">0</strong>
-                <span>Projects</span>
+                <span>Research &amp; Technical Projects</span>
               </div>
             </div>
           </div>
           <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text">
-               <strong class="number" data-number="100" data-suffix="+">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="600">0</strong>
-                <span>Cups of Tea</span>
+                <strong class="number" data-number="6">0</strong>
+                <span>Months of Teaching Experience</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Google Scholar  </span> </h2>
-						<div class="heading"> <h4> I enjoy solving engineering problems at the intersection of materials science and electronics, and translating data into meaningful insights. </h4>
-						<br>
-						<p><a href="https://scholar.google.com/citations?hl=en&user=-owKAGYAAAAJ&view_op=list_works&citft=1&citft=2&email_for_op=sougata.jadavpur.university605%40gmail.com&gmla=AH8HC4yc5lo6GOcUPMjkl_oniI3xn5MwrMyN2--5EizvGw9MjThrHUnUoNAxdvGsqBwdvgoKQaApi0gy4pLdWrbLZsiPOmbZqqxS4cedXYGdVbYxyOO_r3XkSwm6eazIGmHKiMwsNo3d5rRTw3StWr6j20iGGGAvtTfiD1aIC8bdJ6NB8y0CZq6fngvfe0fg_i98Fvl8bDVXG0xJmGy9GB8DXJTSKyCmr-XaFDzbJo1OASEUtWEuDWJV4tRnqMmbQ-KvekAtbA8" class="btn btn-white btn-outline-white py-3 px-4">Google Scholar</a></p>
-							</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
 
+      <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+        <div class="row justify-content-center">
+          <div class="col-md-7 ftco-animate text-center">
+            <h2>See my academic profile on <span>Google Scholar</span></h2>
+            <div class="heading">
+              <h4>My formal publications and citation records are maintained on Google Scholar.</h4>
+              <br>
+              <p><a href="https://scholar.google.com/citations?hl=en&user=-owKAGYAAAAJ&view_op=list_works&citft=1&citft=2&email_for_op=sougata.jadavpur.university605%40gmail.com&gmla=AH8HC4yc5lo6GOcUPMjkl_oniI3xn5MwrMyN2--5EizvGw9MjThrHUnUoNAxdvGsqBwdvgoKQaApi0gy4pLdWrbLZsiPOmbZqqxS4cedXYGdVbYxyOO_r3XkSwm6eazIGmHKiMwsNo3d5rRTw3StWr6j20iGGGAvtTfiD1aIC8bdJ6NB8y0CZq6fngvfe0fg_i98Fvl8bDVXG0xJmGy9GB8DXJTSKyCmr-XaFDzbJo1OASEUtWEuDWJV4tRnqMmbQ-KvekAtbA8" class="btn btn-white btn-outline-white py-3 px-4">Google Scholar</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
+    <!-- CONTACT -->
     <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
+        <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
             <h2 class="mb-4">Contact Me</h2>
@@ -798,109 +844,112 @@ innovation.</li>
 
         <div class="row d-flex contact-info mb-5">
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-  <div class="align-self-stretch box p-4 text-center">
-    <div class="icon d-flex align-items-center justify-content-center">
-      <span class="icon-map-signs"></span>
-    </div>
-    <h3 class="mb-4">Address</h3>
-    <p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Baramara,+Kantadaraja,+Paschim+Medinipur,+West+Bengal+721232" 
-         target="_blank" 
-         style="color: inherit; text-decoration: underline;">
-        VILL: Baramara, P.O: Kantadaraja, DIST: Paschim Medinipur, PIN: 721232
-      </a>
-    </p>
-  </div>
-</div>
-
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	           <p><strong>Phone:</strong> <a href="tel:+918597173482">+91 8597173482</a></p>
-	            <p><strong>Alternate Phone:</strong> <a href="tel:+919732702670">+91 9732702670</a></p>
-	            <p><strong>WhatsApp:</strong> <a href="https://wa.me/+918597173482">+91 8597173482</a></p>
-	            <p><strong>Telegram:</strong> <a href="https://t.me/s">+91 8597173482</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:bhuniatapas605@gmail.com">bhuniatapas605@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/1BJS3tckP7zWaBkxk527N3ry1ikpvYiMC/view?usp=drivesdk">resume link</a></p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Baramara,+Kantadaraja,+Paschim+Medinipur,+West+Bengal+721232" 
+                  target="_blank" 
+                  style="color: inherit; text-decoration: underline;">
+                  VILL: Baramara, P.O: Kantadaraja, DIST: Paschim Medinipur, PIN: 721232
+                </a>
+              </p>
+            </div>
           </div>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScL52Lc27P4KWd62bFCvPddwkZNlaPQ74bh2Nrxn1gBMzJbtA/viewform?usp=sharing&ouid=108201061665366304084" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-<!-- 					  <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li-->
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/sougata-bhunia85"><span class="icon-linkedin"></span></a></li>  
-					 <!--  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-instagram"></span></a></li-->
-					  <li class="ftco-animate"><a href="https://www.instagram.com/sougata_bhunia_07_mahi?igsh=MXBtMHVpYnQyMDg5eA=="><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/sougata_bhunia_07_mahi?igsh=MXBtMHVpYnQyMDg5eA=="><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p><strong>Phone:</strong> <a href="tel:+918597173482">+91 8597173482</a></p>
+              <p><strong>Alternate Phone:</strong> <a href="tel:+919732702670">+91 9732702670</a></p>
+              <p><strong>WhatsApp:</strong> <a href="https://wa.me/+918597173482">+91 8597173482</a></p>
+              <p><strong>Telegram:</strong> <a href="https://t.me/s">+91 8597173482</a></p>
+            </div>
+          </div>
 
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email Address</h3>
+              <p><a href="mailto:bhuniatapas605@gmail.com">bhuniatapas605@gmail.com</a></p>
+            </div>
+          </div>
 
- 
-	
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">Download Resume</h3>
+              <p><a href="https://drive.google.com/file/d/1BJS3tckP7zWaBkxk527N3ry1ikpvYiMC/view?usp=drivesdk">resume link</a></p>
+            </div>
+          </div>
+
+          <div class="container">
+            <br><br>
+            <div class="row justify-content-center">
+              <div class="col-md-7 ftco-animate text-center">
+                <h2>Have a<span> Question?  </span> 
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScL52Lc27P4KWd62bFCvPddwkZNlaPQ74bh2Nrxn1gBMzJbtA/viewform?usp=sharing&ouid=108201061665366304084" class="btn btn-primary py-3 px-5">Click Here</a>
+                </h2>
+              </div>
+            </div>
+            <br>
+            <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+              <li class="ftco-animate normal-txt">Find me on</li>
+              <li class="ftco-animate"><a href="https://www.linkedin.com/in/sougata-bhunia85"><span class="icon-linkedin"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com/sougata_bhunia_07_mahi?igsh=MXBtMHVpYnQyMDg5eA=="><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="https://www.instagram.com/sougata_bhunia_07_mahi?igsh=MXBtMHVpYnQyMDg5eA=="><span class="icon-instagram"></span></a></li>
+            </ul>
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This portfolio is designed with <i class="icon-heart color-danger" aria-hidden="true"></i> by Sougata</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> 
+              All rights reserved | This portfolio is designed with 
+              <i class="icon-heart color-danger" aria-hidden="true"></i> by Sougata
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
